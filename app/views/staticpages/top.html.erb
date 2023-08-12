@@ -1,2 +1,11 @@
-<h1>Staticpages#top</h1>
-<p>Find me in app/views/staticpages/top.html.erb</p>
+<h1 class="title">たくさんの花火を打ち上げたいんだッッッ</h1>
+
+<button class="start-button" id="start-button">Start</button>
+<p class="timer">残り時間: <span id="timer">10</span></p>
+
+<%= image_tag 'hanabi.jpg', class: 'click-button', id: 'click-button', disabled: true %>
+<p class="count">花火の玉の数: <span id="click-count">0</span></p>
+
+<button class="reset-button" id="reset">やり直し</button>
+<button class="launch-fireworks" id="launch-fireworks">花火を打ち上げに行く</button>
+

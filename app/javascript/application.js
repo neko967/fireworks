@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
   startButton.addEventListener('click', function() {
     document.getElementById('click-button').style.display = "block"
     startButton.style.display = 'none';
-    document.getElementById('reset').style.display = "block"
+    document.getElementById('reset-button').style.display = "block"
     countdownInterval = setInterval(function() {
       timeLeft--;
       timerElement.textContent = timeLeft;
@@ -32,21 +32,39 @@ document.addEventListener('DOMContentLoaded', function() {
       if (timeLeft === 0) {
         clearInterval(countdownInterval);
         timerElement.textContent = 'Time\'s up!';
-        document.getElementById('reset').style.left = "60%"
+        document.getElementById('reset-button').style.display = "none"
+        document.getElementById('again-button').style.display = "block"
         document.getElementById('launch-fireworks').style.display = "block"
       }
     }, 1000);
   });
 
-  document.getElementById('reset').addEventListener('click', function() {
+  document.getElementById('reset-button').addEventListener('click', function() {
     clickCount = 0;
     clickCountElement.textContent = clickCount;
 
     startButton.style.display = 'block';
     document.getElementById('click-button').style.display = "none"
-    document.getElementById('reset').style.display = "none"
+    document.getElementById('reset-button').style.display = "none"
     document.getElementById('launch-fireworks').style.display = "none"
-    document.getElementById('reset').style.left = "50%"
+
+    clearInterval(countdownInterval);
+    timeLeft = 10;
+    timerElement.textContent = timeLeft;
+
+    size = 50;
+    document.getElementById('click-button').style.width = size + 'px';
+    document.getElementById('click-button').style.height = size + 'px';
+  });
+
+  document.getElementById('again-button').addEventListener('click', function() {
+    clickCount = 0;
+    clickCountElement.textContent = clickCount;
+
+    startButton.style.display = 'block';
+    document.getElementById('click-button').style.display = "none"
+    document.getElementById('again-button').style.display = "none"
+    document.getElementById('launch-fireworks').style.display = "none"
 
     clearInterval(countdownInterval);
     timeLeft = 10;
@@ -57,6 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('click-button').style.height = size + 'px';
   });
 });
+
+
 
 const Y_AXIS = 1;
 const X_AXIS = 2;

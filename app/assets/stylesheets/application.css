@@ -13,84 +13,91 @@
  *= require_tree .
  *= require_self
  */
-.background-image {
-  background-image: cover;
+
+.container {
+  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 10000px;
 }
+
 .title {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 650px;
-  height: 50px;
+  text-align: center;
+}
+
+.timer {
+  text-align: center;
+}
+
+.count {
+  text-align: center;
 }
 
 .start-button {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 360px;
+  left: 660px;
   width: 100px;
   height: 50px;
-  background-color: white;
+}
+
+@keyframes start-button{
+  100% { background-position: 200%; }
 }
 
 .click-button {
   position: absolute;
-  top: 50%;
+  top: 380px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50px;
   height: 50px;
-  background-color: white;
   transition: width 0.2s, height 0.2s;
-  display: none
-}
-
-.count {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 160px;
-  height: 50px;
+  display: none;
 }
 
 .reset-button {
   position: absolute;
-  top: 90%;
+  top: 650px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   width: 200px;
   height: 50px;
-  display: none
+  display: none;
 }
 
 .again-button {
   position: absolute;
-  top: 90%;
+  top: 650px;
   left: 60%;
-  transform: translate(-50%, -50%);
   width: 200px;
   height: 50px;
-  display: none
+  display: none;
+  transform: translate(-50%, 0%);
 }
 
 .launch-fireworks {
   position: absolute;
-  top: 90%;
+  top: 650px;
   left: 40%;
-  transform: translate(-50%, -50%);
   width: 200px;
   height: 50px;
-  display: none
+  display: none;
+  transform: translate(-50%, 0%);
 }
 
-.timer {
-  position: absolute;
-  top: 17%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 160px;
+.launch-loosely {
+  position: relative;
+  top: 90%;
+  left: 60%;
+  width: 200px;
+  height: 50px;
+}
+
+.launch-violently {
+  position: relative;
+  top: 90%;
+  left: 40%;
+  width: 200px;
   height: 50px;
 }

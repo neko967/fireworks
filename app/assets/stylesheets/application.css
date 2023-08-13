@@ -36,7 +36,8 @@
 .start-button {
   position: absolute;
   top: 360px;
-  left: 660px;
+  left: 50%;
+  transform: translate(-50%, 0%);
   width: 100px;
   height: 50px;
 }
@@ -87,17 +88,19 @@
 }
 
 .launch-loosely {
-  position: relative;
+  position: absolute;
   top: 90%;
   left: 60%;
   width: 200px;
   height: 50px;
+  transform: translate(-50%, -50%);
 }
 
 .launch-violently {
-  position: relative;
+  position: absolute;
   top: 90%;
   left: 40%;
   width: 200px;
   height: 50px;
+  transform: translate(-50%, -50%);
 }

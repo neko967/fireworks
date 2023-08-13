@@ -1,3 +1,5 @@
+console.log("staticpages/top.jsを読み込みました");
+
 document.addEventListener('DOMContentLoaded', function() {
   var clickCount = 0;
   var clickCountElement = document.getElementById('click-count');
@@ -9,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.getElementById('click-button').addEventListener('click', function() {
     if (timeLeft > 0) {
-      clickCount = clickCount + 5;
+      clickCount = clickCount + 1;
       clickCountElement.textContent = clickCount;
-      size += 25;
+      size += 5;
       document.getElementById('click-button').style.width = size + 'px';
       document.getElementById('click-button').style.height = size + 'px';
     }
@@ -153,14 +155,4 @@ function onKeyDown(e) {
 }
 
 document.addEventListener('keydown', onKeyDown)
-
-document.getElementById('rotate-button').addEventListener('click', function() {
-  document.getElementById('rotate-button').animate([
-      {
-        transform: 'rotate(360deg)',
-      },
-    ], {
-      duration: 1000,
-    })
-});
 

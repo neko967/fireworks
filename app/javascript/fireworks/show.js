@@ -9,7 +9,8 @@ const SCREEN_H = window.screen.height;
 let can = document.getElementById("can");
 let con = can.getContext("2d");
 const colors = ["#ffee88", "#C7000B", "#CB4829", "#FFFCDB"];
-const color = colors[Math.floor(Math.random() * colors.length)];
+const color1 = colors[Math.floor(Math.random() * colors.length)];
+const color2 = colors[Math.floor(Math.random() * colors.length)];
 
 can.width = SCREEN_W;
 can.height = SCREEN_H;
@@ -42,7 +43,7 @@ class Zanzo
         if(this.kill)return;
 
         con.globalAlpha= 1.0 * this.c/10;
-        con.fillStyle = color;
+        con.fillStyle = color1;
         con.fillRect(this.x>>8, this.y>>8,2,2);
     }
 }
@@ -109,7 +110,7 @@ class Hanabi
         if(this.kill)return;
 
         con.globalAlpha= 1.0;
-        con.fillStyle = color;
+        con.fillStyle = color2;
         con.fillRect(this.x>>8, this.y>>8,2,2);
         zanzo.push(
             new Zanzo(this.x, this.y)

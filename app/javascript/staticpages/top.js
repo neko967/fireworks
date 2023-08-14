@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.getElementById('click-button').addEventListener('click', function() {
     if (timeLeft > 0) {
-      clickCount = clickCount + 5;
+      clickCount = clickCount + 1;
       clickCountElement.textContent = clickCount;
-      size += 25;
+      size += 5;
       document.getElementById('click-button').style.width = size + 'px';
       document.getElementById('click-button').style.height = size + 'px';
     }

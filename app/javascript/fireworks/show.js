@@ -80,7 +80,7 @@ class Hanabi
             {
                 this.kill=true;
                 
-                for(let i=0; i<300; i++)
+                for(let i=0; i<800; i++)
                 {
                     let r = rand(0, 360);
                     let s = rand(10, 400);
@@ -157,6 +157,8 @@ function mainLoop()
 
 document.getElementById('launch').addEventListener('click', function() {
     hanabi.push(
-        new Hanabi(rand(0, SCREEN_W), SCREEN_H, 0, -1050, 4)
+        new Hanabi(SCREEN_W/2, SCREEN_H, 0, -1050, 4)
     );
+
+    document.getElementById('launch').style.display = "none"
 });

@@ -96,10 +96,21 @@
   position: fixed;
 }
 
-.launch {
+.manual-launch {
   position: absolute;
   top: 90%;
-  left: 50%;
+  left: 40%;
+  width: 200px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  display: block;
+  z-index: 1;
+}
+
+.auto-launch {
+  position: absolute;
+  top: 90%;
+  left: 60%;
   width: 200px;
   height: 50px;
   transform: translate(-50%, -50%);

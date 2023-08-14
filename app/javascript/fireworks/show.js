@@ -161,8 +161,17 @@ function mainLoop()
     draw();
 }
 
-document.getElementById('launch').addEventListener('click', function() {
+document.getElementById('manual-launch').addEventListener('click', function() {
     hanabi.push(
         new Hanabi(SCREEN_W/2, SCREEN_H, rand(-60, 60), rand(-1700, -1800), 10)
     );
+});
+
+document.getElementById('auto-launch').addEventListener('click', function() {
+  setInterval(function() {
+    hanabi.push(
+      new Hanabi(SCREEN_W/2, SCREEN_H, rand(-60, 60), rand(-1700, -1800), 10)
+    );
+  }, 3500);
+  document.getElementById('auto-launch').style.display = "none"
 });

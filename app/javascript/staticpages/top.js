@@ -39,13 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let seventy_counts = window.setTimeout(function(){
       if (clickCount >= 70) {
-        alert('実績を解除しました🏆[連打の鬼]\n\nすごいね!!  そういえばRUNTEQって何周年を迎えたっけ？');
-      }
-    }, 10500);
-
-    let four_counts = window.setTimeout(function(){
-      if (clickCount === 4) {
-        alert('実績を解除しました🏆[I♡RUNTEQ]\n\n4回か〜〜そういえばRUNTEQも4周年だったね!!');
+        alert('実績を解除しました🏆[連打の鬼]');
       }
     }, 10500);
 
@@ -62,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 40000);
 
     let one_minute = window.setTimeout(function(){
-        alert('実績が解除されました 🏆[暇人]\n\nR,U,N,T,E,Q → Start ？');
+        alert('実績が解除されました 🏆[暇人]');
     }, 60000);
 
     document.getElementById('click-button').addEventListener('click', function() {
@@ -92,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('start-button').style.height = "";
 
       window.clearTimeout(seventy_counts);
-      window.clearTimeout(four_counts);
       window.clearTimeout(ten_seconds);
       window.clearTimeout(thirty_seconds);
       window.clearTimeout(fourty_seconds);
@@ -133,32 +126,4 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('start-button').style.height = "";
   });
 });
-
-function targetRotate() {
-  document.getElementById('start-button').animate([
-    {
-      transform: 'rotate(1800deg)',
-    },
-  ], {
-    duration: 1000,
-  })
-  document.getElementById('start-button').style.width = "200px";
-  document.getElementById('start-button').style.height = "200px";
-}
- 
-const keyArr = []
- 
-function onKeyDown(e) {
-
-  keyArr.push(e.code)
-  if (keyArr.length > 6) { keyArr.shift()}
-  const runteqCommand = ['KeyR', 'KeyU', 'KeyN', 'KeyT', 'KeyE', 'KeyQ']
-  console.log(keyArr)
-  
-  if (String(keyArr) === String(runteqCommand)) {
-    targetRotate()
-  }
-}
-
-document.addEventListener('keydown', onKeyDown)
 

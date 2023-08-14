@@ -111,7 +111,7 @@ class Hanabi
 
         con.globalAlpha= 1.0;
         con.fillStyle = color2;
-        con.fillRect(this.x>>8, this.y>>8,2,2);
+        con.fillRect(this.x>>8, this.y>>8,3,3);
         zanzo.push(
             new Zanzo(this.x, this.y)
         );
@@ -175,6 +175,6 @@ document.getElementById('auto-launch').addEventListener('click', function() {
     hanabi.push(
       new Hanabi(SCREEN_W/2, SCREEN_H, rand(-60, 60), rand(-1800, -1900), 10)
     );
-  }, 5000);
+  }, 6000);
   document.getElementById('auto-launch').style.display = "none"
 });

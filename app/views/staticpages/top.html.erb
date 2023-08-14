@@ -3,12 +3,14 @@
 <% end %>
 
 <div class="container">
+  <%= image_tag 'hanabi.png', class: 'click-button', id: 'click-button', disabled: true %>
   <h1 class="title">たくさんの花火を打ち上げたいんだッッッ</h1>
   <p class="timer">残り時間: <span id="timer">10</span></p>
   <p class="count">花火の玉の数: <span id="click-count">0</span></p>
   
   <button class="start-button" id="start-button">Start</button>
-  <%= image_tag 'hanabi.png', class: 'click-button', id: 'click-button', disabled: true %>
+
+  
   
   <button class="reset-button" id="reset-button">やり直す</button>
   

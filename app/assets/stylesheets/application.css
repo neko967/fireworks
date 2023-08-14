@@ -19,73 +19,72 @@
   background-color: orange;
   width: 100vw;
   height: 100vh;
-}
+  z-index: 0;
 
-.title {
-  text-align: center;
-}
+  .title {
+    text-align: center;
+  }
 
-.timer {
-  text-align: center;
-}
+  .timer {
+    text-align: center;
+  }
+  .count {
+    text-align: center;
+  }
 
-.count {
-  text-align: center;
-}
+  .start-button {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 50px;
+  }
 
-.start-button {
-  position: absolute;
-  top: 340px;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  width: 100px;
-  height: 50px;
-}
+  .click-button {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    transition: width 0.2s, height 0.2s;
+    display: none;
+    z-index: -1;
+  }
 
-.click-button {
-  position: absolute;
-  top: 360px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  transition: width 0.2s, height 0.2s;
-  display: none;
-}
+  .reset-button {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 200px;
+    height: 50px;
+    display: none;
+  }
 
-.reset-button {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  width: 200px;
-  height: 50px;
-  display: none;
-}
+  .again-button {
+    position: absolute;
+    top: 80%;
+    left: 60%;
+    width: 200px;
+    height: 50px;
+    display: none;
+    transform: translate(-50%, 0%);
+  }
 
-.again-button {
-  position: absolute;
-  top: 80%;
-  left: 60%;
-  width: 200px;
-  height: 50px;
-  display: none;
-  transform: translate(-50%, 0%);
-}
-
-.launch-fireworks {
-  position: absolute;
-  top: 80%;
-  left: 40%;
-  width: 200px;
-  height: 50px;
-  display: none;
-  transform: translate(-50%, 0%);
+  .launch-fireworks {
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    width: 200px;
+    height: 50px;
+    display: none;
+    transform: translate(-50%, 0%);
+  }
 }
 
 .container-fireworks {
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -104,8 +103,8 @@
 .back {
   position: absolute;
   top: 5%;
-  left: 97%;
-  width: 50px;
-  height: 50px;
+  left: 96%;
+  width: 40px;
+  height: 40px;
   transform: translate(-50%, -50%);
 }

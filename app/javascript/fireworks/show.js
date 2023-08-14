@@ -8,7 +8,8 @@ const SCREEN_H = window.screen.height;
 
 let can = document.getElementById("can");
 let con = can.getContext("2d");
-const colors = ["#ffee88", "#C7000B", "#CB4829", "#FFFCDB"];
+//パールホワイト・レモンイエロー・ライトレモン・ワインレッド・赤・紅葉色・スカイブルー・ツイッターブルー・ライムグリーン・桜色・アメジスト・紫
+const colors = ["#fffef7", "#FFF450", "#FFFCBF", "#932e44", "#C7000B","#a61017","a0d8ef", "#1DA1F2", "#32CD32","#fdeeef", "#9E76B4","#884898"];
 const color1 = colors[Math.floor(Math.random() * colors.length)];
 const color2 = colors[Math.floor(Math.random() * colors.length)];
 

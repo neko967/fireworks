@@ -53,6 +53,15 @@
     z-index: -1;
   }
 
+  .hisaju {
+    position: absolute;
+    top: 35%;
+    left: 65%;
+    display: none;
+    z-index: -2;
+    transform: rotate(0deg);
+  }
+
   .reset-button {
     position: absolute;
     top: 80%;

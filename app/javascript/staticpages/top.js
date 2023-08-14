@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
       size += 5;
       document.getElementById('click-button').style.width = size + 'px';
       document.getElementById('click-button').style.height = size + 'px';
+      document.getElementById('hisaju').style.transform += "rotate(5deg)";
     }
   });
   
@@ -84,3 +85,33 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
+
+function targetAppear() {
+  const target = document.querySelector('.hisaju')
+  target.style.display = "block"
+}
+ 
+const keyArr = []
+ 
+function onKeyDown(e) {
+  keyArr.push(e.code)
+  if (keyArr.length > 6) {
+    keyArr.shift()
+  }
+  const konamiCommand = [
+    'KeyH',
+    'KeyI',
+    'KeyS',
+    'KeyA',
+    'KeyJ',
+    'KeyU',
+  ]
+  console.log(keyArr)
+ 
+  if (String(keyArr) === String(konamiCommand)) {
+    targetAppear()
+  }
+}
+ 
+document.addEventListener('keydown', onKeyDown)

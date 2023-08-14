@@ -78,7 +78,7 @@
     float: right;
     width: 200px;
     height: 50px;
-    display: block;
+    display: none;
     margin: 10px;
   }
 
@@ -86,7 +86,7 @@
     float: left;
     width: 200px;
     height: 50px;
-    display: block;
+    display: none;
     margin: 10px;
   }
 }

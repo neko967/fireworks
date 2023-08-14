@@ -86,7 +86,7 @@ class Hanabi
             {
                 this.kill=true;
                 
-                for(let i=0; i<value*3; i++)
+                for(let i=0; i<value*9; i++)
                 {
                     let r = rand(0, 360);
                     let s = rand(10, 400);

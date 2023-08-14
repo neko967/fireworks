@@ -1,15 +1,20 @@
 console.log("firewokrs/show.jsを読み込みました");
+
+const value = sessionStorage.getItem('value');
+document.getElementById('click-count').textContent = value
+
 const SCREEN_W = window.screen.width;
 const SCREEN_H = window.screen.height;
 
 let can = document.getElementById("can");
 let con = can.getContext("2d");
-var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+const colors = ["#ffee88", "#C7000B", "#CB4829", "#FFFCDB"];
+const color = colors[Math.floor(Math.random() * colors.length)];
 
 can.width = SCREEN_W;
 can.height = SCREEN_H;
 
-setInterval(mainLoop, 1000/60);
+setInterval(mainLoop, 1000/70);
 
 function rand(min, max)
 {
@@ -37,7 +42,7 @@ class Zanzo
         if(this.kill)return;
 
         con.globalAlpha= 1.0 * this.c/10;
-        con.fillStyle = "#ffee88";
+        con.fillStyle = color;
         con.fillRect(this.x>>8, this.y>>8,2,2);
     }
 }
@@ -80,7 +85,7 @@ class Hanabi
             {
                 this.kill=true;
                 
-                for(let i=0; i<10; i++)
+                for(let i=0; i<value*4; i++)
                 {
                     let r = rand(0, 360);
                     let s = rand(10, 400);
@@ -104,7 +109,7 @@ class Hanabi
         if(this.kill)return;
 
         con.globalAlpha= 1.0;
-        con.fillStyle = "#ffee88";
+        con.fillStyle = color;
         con.fillRect(this.x>>8, this.y>>8,2,2);
         zanzo.push(
             new Zanzo(this.x, this.y)

@@ -76,5 +76,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('start-button').style.width = "";
     document.getElementById('start-button').style.height = "";
   });
+
+  document.getElementById('launch-fireworks').addEventListener('click', function() {
+    const value = clickCount;
+    sessionStorage.setItem('value', value);
+    window.location.href = '/fireworks';
+  });
 });
 

@@ -61,7 +61,7 @@ class Hanabi
         
         if(hp==undefined)
         {
-            this.hp=200;
+            this.hp=value*7;
             this.type = 0;
         }
         else
@@ -86,7 +86,7 @@ class Hanabi
             {
                 this.kill=true;
                 
-                for(let i=0; i<value*9; i++)
+                for(let i=0; i<value*10; i++)
                 {
                     let r = rand(0, 360);
                     let s = rand(10, 400);
@@ -94,7 +94,7 @@ class Hanabi
                     let vy = Math.sin(r*Math.PI/180)*s;
 
                     hanabi.push(
-                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, 200)
+                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*4)
                     );
                 }
             }
@@ -163,15 +163,18 @@ function mainLoop()
 
 document.getElementById('manual-launch').addEventListener('click', function() {
     hanabi.push(
-        new Hanabi(SCREEN_W/2, SCREEN_H, rand(-60, 60), rand(-1700, -1800), 10)
+        new Hanabi(SCREEN_W/2, SCREEN_H, rand(-60, 60), rand(-1800, -1900), 10)
     );
 });
 
 document.getElementById('auto-launch').addEventListener('click', function() {
+  hanabi.push(
+    new Hanabi(SCREEN_W/2, SCREEN_H, rand(-60, 60), rand(-1800, -1900), 10)
+  );
   setInterval(function() {
     hanabi.push(
-      new Hanabi(SCREEN_W/2, SCREEN_H, rand(-60, 60), rand(-1700, -1800), 10)
+      new Hanabi(SCREEN_W/2, SCREEN_H, rand(-60, 60), rand(-1800, -1900), 10)
     );
-  }, 3500);
+  }, 5000);
   document.getElementById('auto-launch').style.display = "none"
 });

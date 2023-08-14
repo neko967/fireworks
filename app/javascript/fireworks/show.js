@@ -155,12 +155,8 @@ function mainLoop()
     draw();
 }
 
-document.onkeydown = function(e)
-{
-    if(e.keyCode==32)
-    {
-        hanabi.push(
-            new Hanabi(rand(0, SCREEN_W), SCREEN_H, 0, -1050, 4)
-        );
-    }
-}
+document.getElementById('launch').addEventListener('click', function() {
+    hanabi.push(
+        new Hanabi(rand(0, SCREEN_W), SCREEN_H, 0, -1050, 4)
+    );
+});

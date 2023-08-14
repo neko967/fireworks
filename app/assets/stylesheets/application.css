@@ -58,7 +58,7 @@
     top: 80%;
     left: 50%;
     transform: translate(-50%, 0%);
-    width: 200px;
+    width: 250px;
     height: 50px;
     display: none;
     z-index: 2;
@@ -67,7 +67,7 @@
   .finish-button {
     position: absolute;
     color: white;
-    width: 220px;
+    width: 270px;
     height: 130px;
     left: 50%;
     bottom: 10%;
@@ -75,14 +75,14 @@
     z-index: -1;
   }
   .again-button {
-    width: 200px;
+    width: 250px;
     height: 50px;
     display: none;
     margin: 10px;
   }
 
   .launch-fireworks {
-    width: 200px;
+    width: 250px;
     height: 50px;
     display: none;
     margin: 10px;
@@ -139,4 +139,40 @@
   left: 1%;
   width: 50px;
   height: 50px;
+}
+
+.stars {
+  position: relative;
+  width: 100%; /* 星空の横幅 */
+  height: 100vh; /* 星空の縦幅 */
+  background-image: linear-gradient(0deg, #00dedc, #115d89, #080f1c); /* 星空の背景色 */
+  overflow: hidden; /* 星が枠外にはみ出すのを防ぐ */
+}
+
+/* 星のスタイル */
+.star {
+  position: absolute;
+  display: block;
+  background-color: #fff; /* 星の色 */
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px rgba(#fff, 0.2); /* 星の影 */
+  opacity: 0;
+  animation: twinkle 5s infinite;
+}
+
+/* 星がキラキラ光るアニメーション */
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
 }

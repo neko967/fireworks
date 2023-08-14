@@ -111,7 +111,7 @@ class Hanabi
 
         con.globalAlpha= 1.0;
         con.fillStyle = color2;
-        con.fillRect(this.x>>8, this.y>>8,3,3);
+        con.fillRect(this.x>>8, this.y>>8,2,2);
         zanzo.push(
             new Zanzo(this.x, this.y)
         );
@@ -179,10 +179,6 @@ document.getElementById('auto-launch').addEventListener('click', function() {
   document.getElementById('auto-launch').style.display = "none"
 });
 
-
-
-
-
 window.addEventListener("DOMContentLoaded", () => {
   // 星を表示するための親要素を取得
   const stars = document.querySelector(".stars");
@@ -207,3 +203,13 @@ window.addEventListener("DOMContentLoaded", () => {
     createStar();
   }
 });
+
+var shareUrl  = 'https://twitter.com/intent/tweet';
+    shareUrl += '?text='+encodeURIComponent(`${value}kgの花火を打ち上げました！`);
+    shareUrl += '&url='+encodeURIComponent('https://fireworks-svqb.onrender.com');
+    shareUrl += '&hashtags='+encodeURIComponent('ミニアプリWeek,打ち上げ花火');
+ 
+// シェアボタン追加
+var shareArea = document.getElementById('fa-twitter');
+var shareLink = '<a href="' + shareUrl + '" target="_blank" rel="nofollow noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>';
+shareArea.innerHTML = shareLink;

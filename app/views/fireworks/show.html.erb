@@ -2,10 +2,9 @@
   <%= javascript_import_module_tag "fireworks/show" %>
 <% end %>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
-<canvas id="firework"></canvas>
 
-
-
-<button class="launch-violently" id="launch-violently">激しく打ち上げる</button>
-<button class="launch-loosely" id="launch-loosely">ゆったり打ち上げる</button>
+<div class="container-fireworks" id="container-fireworks">
+<canvas id="can"></canvas>
+  <button class="launch-violently" id="launch-violently">激しく打ち上げる</button>
+  <button class="launch-loosely" id="launch-loosely">ゆったり打ち上げる</button>
+</div>

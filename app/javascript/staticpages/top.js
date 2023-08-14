@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
       window.clearTimeout(thirty_seconds);
       window.clearTimeout(fourty_seconds);
       window.clearTimeout(one_minute);
-
     });
 
     document.getElementById('reset-button').addEventListener('click', function() {
@@ -101,6 +100,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.getElementById('again-button').addEventListener('click', function() {
+      window.clearTimeout(ten_seconds);
+      window.clearTimeout(thirty_seconds);
+      window.clearTimeout(fourty_seconds);
+      window.clearTimeout(one_minute);
+    });
+
+    document.getElementById('launch-fireworks').addEventListener('click', function() {
       window.clearTimeout(ten_seconds);
       window.clearTimeout(thirty_seconds);
       window.clearTimeout(fourty_seconds);

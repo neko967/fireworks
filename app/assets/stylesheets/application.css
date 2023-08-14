@@ -17,8 +17,8 @@
 .container {
   position: relative;
   background-color: orange;
-  width: 100vw;
-  height: 100vh;
+  width: 98vw;
+  height: 96vh;
   z-index: 0;
 
   .title {
@@ -95,7 +95,7 @@
   position: absolute;
   top: 90%;
   left: 50%;
-  width: 150px;
+  width: 200px;
   height: 50px;
   transform: translate(-50%, -50%);
   display: block;
@@ -104,17 +104,19 @@
 .back {
   position: absolute;
   top: 90%;
-  left: 40%;
+  left: 46%;
   width: 50px;
   height: 50px;
   transform: translate(-50%, -50%);
+  display: none;
 }
 
 .tweet {
   position: absolute;
   top: 90%;
-  left: 60%;
+  left: 54%;
   width: 50px;
   height: 50px;
   transform: translate(-50%, -50%);
+  display: none;
 }

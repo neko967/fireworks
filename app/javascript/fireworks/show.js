@@ -165,8 +165,4 @@ document.getElementById('launch').addEventListener('click', function() {
     hanabi.push(
         new Hanabi(SCREEN_W/2, SCREEN_H, rand(-60, 60), rand(-1700, -1800), 10)
     );
-
-    document.getElementById('launch').style.display = "none"
-    document.getElementById('back').style.display = "block"
-    document.getElementById('tweet').style.display = "block"
 });

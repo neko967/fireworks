@@ -14,7 +14,7 @@ const color = colors[Math.floor(Math.random() * colors.length)];
 can.width = SCREEN_W;
 can.height = SCREEN_H;
 
-setInterval(mainLoop, 1000/70);
+setInterval(mainLoop, 1000/60);
 
 function rand(min, max)
 {
@@ -85,7 +85,7 @@ class Hanabi
             {
                 this.kill=true;
                 
-                for(let i=0; i<value*4; i++)
+                for(let i=0; i<value*3; i++)
                 {
                     let r = rand(0, 360);
                     let s = rand(10, 400);
@@ -162,7 +162,7 @@ function mainLoop()
 
 document.getElementById('launch').addEventListener('click', function() {
     hanabi.push(
-        new Hanabi(SCREEN_W/2, SCREEN_H, 0, -1050, 4)
+        new Hanabi(SCREEN_W/2, SCREEN_H, rand(-60, 60), rand(-1700, -1800), 10)
     );
 
     document.getElementById('launch').style.display = "none"

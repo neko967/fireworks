@@ -16,7 +16,7 @@
 
 .container {
   position: relative;
-  background-color: orange;
+  background-color: white;
   width: 98vw;
   height: 96vh;
   z-index: 0;
@@ -105,6 +105,7 @@
   height: 50px;
   transform: translate(-50%, -50%);
   display: block;
+  z-index: 1;
 }
 
 .fireworks-weight {
@@ -121,8 +122,9 @@
   width: 200px;
   height: 50px;
   left: 50%;
-  bottom: 10%;
-  transform: translate(-50%, 0%);
+  top: 90%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 .back {
@@ -130,6 +132,7 @@
   width: 50px;
   height: 50px;
   display: none;
+
 }
 
 .tweet {

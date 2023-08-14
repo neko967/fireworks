@@ -175,7 +175,7 @@ document.getElementById('auto-launch').addEventListener('click', function() {
     hanabi.push(
       new Hanabi(SCREEN_W/2, SCREEN_H, rand(-60, 60), rand(-1800, -1900), 10)
     );
-  }, 6000);
+  }, 6500);
   document.getElementById('auto-launch').style.display = "none"
 });
 

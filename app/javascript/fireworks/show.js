@@ -1,5 +1,3 @@
-console.log("firewokrs/show.jsを読み込みました");
-
 const value = sessionStorage.getItem('value');
 document.getElementById('click-count').textContent = value
 

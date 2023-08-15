@@ -1,2 +1,0 @@
-class Click < ApplicationRecord
-end

@@ -1,5 +1,3 @@
-console.log("staticpages/top.jsを読み込みました");
-
 document.addEventListener('DOMContentLoaded', function() {
   var clickCount = 0;
   var clickCountElement = document.getElementById('click-count');

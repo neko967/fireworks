@@ -1,3 +1,4 @@
+//top画面でのボタンのあれこれ
 document.addEventListener('DOMContentLoaded', function() {
   var clickCount = 0;
   var clickCountElement = document.getElementById('click-count');
@@ -7,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var countdownInterval;
   var size = 50;
 
+  //花火の玉の画像を押すごとにカウントが1ずつ増え、大きさが5px大きくなる
   document.getElementById('click-button').addEventListener('click', function() {
     if (timeLeft > 0) {
       clickCount = clickCount + 1;
@@ -18,15 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
+  //スタートボタンを押すと花火の玉とやり直すボタンが出現し、スタートボタンは消える
   startButton.addEventListener('click', function() {
     document.getElementById('click-button').style.display = "block"
     document.getElementById('reset-button').style.display = "block"
     startButton.style.display = 'none';
 
+    //カウントダウンを始める
     countdownInterval = setInterval(function() {
       timeLeft--;
       timerElement.textContent = timeLeft;
-  
+
+      //0秒になったらカウントダウンを止めて、ボタンを消したり表示したりする
       if (timeLeft === 0) {
         clearInterval(countdownInterval);
         timerElement.textContent = 'Time\'s up!';
@@ -57,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  //"もう一度"ボタンを押した時の挙動
   document.getElementById('again-button').addEventListener('click', function() {
     clickCount = 0;
     clickCountElement.textContent = clickCount;
@@ -76,15 +82,16 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('start-button').style.height = "";
   });
 
+  //"花火を打ち上げにいく"ボタンを押すと、クリック数を変数valueに入れて、次のページに持ち越す
   document.getElementById('launch-fireworks').addEventListener('click', function() {
     const value = clickCount;
     sessionStorage.setItem('value', value);
-    window.location.href = '/fireworks';
   });
 });
 
 
 
+//ただのひさじゅ校長の隠しコマンドなので気にしないで（スタート画面で"hisaju"と打つと校長が現れます）
 function targetAppear() {
   const target = document.querySelector('.hisaju')
   target.style.display = "block"

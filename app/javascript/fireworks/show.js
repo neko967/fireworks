@@ -1,6 +1,9 @@
+//前のページから変数valueを受け取って、表示する
 const value = sessionStorage.getItem('value');
 document.getElementById('click-count').textContent = value
 
+///////////////////////////////ここから花火のシステム////////////////////////////////////////////
+//縦横の大きさとして、スクリーンの大きさを取得
 const SCREEN_W = window.screen.width;
 const SCREEN_H = window.screen.height;
 
@@ -177,7 +180,9 @@ document.getElementById('auto-launch').addEventListener('click', function() {
   }, 6500);
   document.getElementById('auto-launch').style.display = "none"
 });
+///////////////////////////////////ここまで花火のシステム/////////////////////////////////////////
 
+////////////////////////////////ここから背景の星空のアニメーション//////////////////////////////////
 window.addEventListener("DOMContentLoaded", () => {
   // 星を表示するための親要素を取得
   const stars = document.querySelector(".stars");
@@ -202,13 +207,15 @@ window.addEventListener("DOMContentLoaded", () => {
     createStar();
   }
 });
+//////////////////////////////////ここまで背景の星空のアニメーション//////////////////////////////////
 
+//////////////////////////////////ここからシェアボタンの挙動//////////////////////////////////////////////
 var shareUrl  = 'https://twitter.com/intent/tweet';
     shareUrl += '?text='+encodeURIComponent(`${value}kgの花火を打ち上げました！`);
     shareUrl += '&url='+encodeURIComponent('https://fireworks-svqb.onrender.com');
     shareUrl += '&hashtags='+encodeURIComponent('ミニアプリWeek,打ち上げ花火');
  
-// シェアボタン追加
 var shareArea = document.getElementById('fa-twitter');
 var shareLink = '<a href="' + shareUrl + '" target="_blank" rel="nofollow noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>';
 shareArea.innerHTML = shareLink;
+//////////////////////////////////ここまでシェアボタンの挙動//////////////////////////////////////////////

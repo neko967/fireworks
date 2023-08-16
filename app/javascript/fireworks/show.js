@@ -2,7 +2,7 @@
 const value = sessionStorage.getItem('value');
 document.getElementById('click-count').textContent = value
 
-///////////////////////////////ここから花火のシステム////////////////////////////////////////////
+///////////////////////////////ここから花火のシステム end:190///////////////////////////////////////////
 //縦横の大きさとして、スクリーンの大きさを取得
 const SCREEN_W = window.screen.width;
 const SCREEN_H = window.screen.height;
@@ -14,7 +14,8 @@ can.width = SCREEN_W;
 can.height = SCREEN_H;
 
 //花火の色：パールホワイト・レモンイエロー・ライトレモン・ワインレッド・赤・紅葉色・スカイブルー・ツイッターブルー・ライムグリーン・桜色・アメジスト・紫
-const colors = ["#fffef7", "#FFF450", "#FFFCBF", "#932e44", "#C7000B","#a61017","a0d8ef", "#1DA1F2", "#32CD32","#fdeeef", "#9E76B4","#884898"];
+//const colors = ["#fffef7", "#FFF450", "#FFFCBF", "#932e44", "#C7000B","#a61017","#a0d8ef", "#1DA1F2", "#32CD32","#fdeeef", "#9E76B4","#884898"];
+const colors = ["#1DA1F2"];
 const hanabi_color = colors[Math.floor(Math.random() * colors.length)];
 const zanzo_color  = colors[Math.floor(Math.random() * colors.length)];
 
@@ -108,16 +109,151 @@ class Hanabi
             if(this.vy>0)
             {
                 this.kill=true;
-                
-                for(let i=0; i<value*10; i++)
+            
+                for(let i=-1; i<120; i++)
                 {
-                    let r = rand(0, 360);
-                    let s = rand(10, 400);
-                    let vx = Math.cos(r*Math.PI/180)*s;
-                    let vy = Math.sin(r*Math.PI/180)*s;
+                    let r = i
+                    let s = 432
+                    let vx = Math.cos(r*Math.PI/180)*s-150;
+                    let vy = Math.sin(r*Math.PI/180)*s-120;
 
                     hanabi.push(
-                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*4)
+                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
+                    );
+                }
+                for(let i=38; i<61; i++)
+                {
+                    let r = i
+                    let s = 300
+                    let vx = Math.cos(r*Math.PI/180)*s+135;
+                    let vy = Math.sin(r*Math.PI/180)*s-390;
+
+                    hanabi.push(
+                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
+                    );
+                }
+                for(let i=69; i<83; i++)
+                {
+                    let r = i
+                    let s = 450
+                    let vx = Math.cos(r*Math.PI/180)*s+210;
+                    let vy = Math.sin(r*Math.PI/180)*s-624;
+
+                    hanabi.push(
+                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
+                    );
+                }
+                for(let i=23; i<63; i = i +2)
+                {
+                    let r = i
+                    let s = 150
+                    let vx = Math.cos(r*Math.PI/180)*s+201;
+                    let vy = Math.sin(r*Math.PI/180)*s-312;
+
+                    hanabi.push(
+                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
+                    );
+                }
+                for(let i=63; i<76; i++)
+                {
+                    let r = i
+                    let s = 450
+                    let vx = Math.cos(r*Math.PI/180)*s+130.5;
+                    let vy = Math.sin(r*Math.PI/180)*s-651;
+
+                    hanabi.push(
+                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
+                    );
+                }
+                for(let i=175; i<320; i = i +2)
+                {
+                    let r = i
+                    let s = 150
+                    let vx = Math.cos(r*Math.PI/180)*s+130;
+                    let vy = Math.sin(r*Math.PI/180)*s-120;
+
+                    hanabi.push(
+                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
+                    );
+                }
+
+                for(let i=97; i<140; i++)
+                {
+                    let r = i
+                    let s = 450
+                    let vx = Math.cos(r*Math.PI/180)*s+30;
+                    let vy = Math.sin(r*Math.PI/180)*s-555;
+
+                    hanabi.push(
+                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
+                    );
+                }
+
+                for(let i=125; i<216; i = i +2)
+                {
+                    let r = i
+                    let s = 150
+                    let vx = Math.cos(r*Math.PI/180)*s-189;
+                    let vy = Math.sin(r*Math.PI/180)*s-171;
+
+                    hanabi.push(
+                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
+                    );
+                }
+
+                for(let i=97; i<111; i++)
+                {
+                    let r = i
+                    let s = 300
+                    let vx = Math.cos(r*Math.PI/180)*s-234;
+                    let vy = Math.sin(r*Math.PI/180)*s-345;
+
+                    hanabi.push(
+                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
+                    );
+                }
+                for(let i=102; i<181; i = i +2)
+                {
+                    let r = i
+                    let s = 150
+                    let vx = Math.cos(r*Math.PI/180)*s-189;
+                    let vy = Math.sin(r*Math.PI/180)*s-66;
+
+                    hanabi.push(
+                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
+                    );
+                }
+                for(let i=83; i<97; i++)
+                {
+                    let r = i
+                    let s = 300
+                    let vx = Math.cos(r*Math.PI/180)*s-255;
+                    let vy = Math.sin(r*Math.PI/180)*s-216;
+
+                    hanabi.push(
+                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
+                    );
+                }
+                for(let i=91; i<162; i = i +2)
+                {
+                    let r = i
+                    let s = 150
+                    let vx = Math.cos(r*Math.PI/180)*s-147;
+                    let vy = Math.sin(r*Math.PI/180)*s+33;
+
+                    hanabi.push(
+                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
+                    );
+                }
+                for(let i=50; i<96; i++)
+                {
+                    let r = i
+                    let s = 300
+                    let vx = Math.cos(r*Math.PI/180)*s-337.5;
+                    let vy = Math.sin(r*Math.PI/180)*s-45;
+
+                    hanabi.push(
+                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
                     );
                 }
             }
@@ -183,13 +319,13 @@ document.getElementById('auto-launch').addEventListener('click', function() {
         hanabi.push(
           new Hanabi(SCREEN_W/2, SCREEN_H, rand(-60, 60), rand(-1800, -1900), 10)
         );
-    }, 6500);
+    }, 5000);
 
     document.getElementById('auto-launch').style.display = "none"
 });
 ///////////////////////////////////ここまで花火のシステム/////////////////////////////////////////
 
-////////////////////////////////ここから背景の星空のアニメーション//////////////////////////////////
+////////////////////////////////ここから背景の星空のアニメーション end: 217//////////////////////////////////
 window.addEventListener("DOMContentLoaded", () => {
     // 星を表示するための親要素を取得
     const stars = document.querySelector(".stars");
@@ -216,7 +352,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 //////////////////////////////////ここまで背景の星空のアニメーション//////////////////////////////////
 
-//////////////////////////////////ここからシェアボタンの挙動//////////////////////////////////////////////
+//////////////////////////////////ここからシェアボタンの挙動 end: 228//////////////////////////////////////////////
 var shareUrl  = 'https://twitter.com/intent/tweet';
     shareUrl += '?text='+encodeURIComponent(`${value}kgの花火を打ち上げました！`);
     shareUrl += '&url='+encodeURIComponent('https://fireworks-svqb.onrender.com');

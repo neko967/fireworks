@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var timerElement = document.getElementById('timer');
   var startButton = document.getElementById('start-button');
   var countdownInterval;
-  var size = 50;
+  var size = 100;
 
   //花火の玉の画像を押すごとにカウントが1ずつ増え、大きさが5px大きくなる
   document.getElementById('click-button').addEventListener('click', function() {
@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }, 1000);
 
+    //"やり直す"ボタンを押した時の挙動
     document.getElementById('reset-button').addEventListener('click', function() {
       clickCount = 0;
       clickCountElement.textContent = clickCount;
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
       timeLeft = 10;
       timerElement.textContent = timeLeft;
 
-      size = 50;
+      size = 100;
       document.getElementById('click-button').style.width = size + 'px';
       document.getElementById('click-button').style.height = size + 'px';
       document.getElementById('start-button').style.width = "";
@@ -75,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     clearInterval(countdownInterval);
     timeLeft = 10;
     timerElement.textContent = timeLeft;
-    size = 50;
+    size = 100;
     document.getElementById('click-button').style.width = size + 'px';
     document.getElementById('click-button').style.height = size + 'px';
     document.getElementById('start-button').style.width = "";

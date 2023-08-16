@@ -115,7 +115,7 @@ class Hanabi
                     let r = i
                     let s = 432
                     let vx = Math.cos(r*Math.PI/180)*s-150;
-                    let vy = Math.sin(r*Math.PI/180)*s-120;
+                    let vy = Math.sin(r*Math.PI/180)*s-140;
 
                     hanabi.push(
                         new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
@@ -126,7 +126,7 @@ class Hanabi
                     let r = i
                     let s = 300
                     let vx = Math.cos(r*Math.PI/180)*s+135;
-                    let vy = Math.sin(r*Math.PI/180)*s-390;
+                    let vy = Math.sin(r*Math.PI/180)*s-410;
 
                     hanabi.push(
                         new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
@@ -137,7 +137,7 @@ class Hanabi
                     let r = i
                     let s = 450
                     let vx = Math.cos(r*Math.PI/180)*s+210;
-                    let vy = Math.sin(r*Math.PI/180)*s-624;
+                    let vy = Math.sin(r*Math.PI/180)*s-644;
 
                     hanabi.push(
                         new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
@@ -148,7 +148,7 @@ class Hanabi
                     let r = i
                     let s = 150
                     let vx = Math.cos(r*Math.PI/180)*s+201;
-                    let vy = Math.sin(r*Math.PI/180)*s-312;
+                    let vy = Math.sin(r*Math.PI/180)*s-332;
 
                     hanabi.push(
                         new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
@@ -159,7 +159,7 @@ class Hanabi
                     let r = i
                     let s = 450
                     let vx = Math.cos(r*Math.PI/180)*s+130.5;
-                    let vy = Math.sin(r*Math.PI/180)*s-651;
+                    let vy = Math.sin(r*Math.PI/180)*s-671;
 
                     hanabi.push(
                         new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
@@ -170,7 +170,7 @@ class Hanabi
                     let r = i
                     let s = 150
                     let vx = Math.cos(r*Math.PI/180)*s+130;
-                    let vy = Math.sin(r*Math.PI/180)*s-120;
+                    let vy = Math.sin(r*Math.PI/180)*s-140;
 
                     hanabi.push(
                         new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
@@ -182,7 +182,7 @@ class Hanabi
                     let r = i
                     let s = 450
                     let vx = Math.cos(r*Math.PI/180)*s+30;
-                    let vy = Math.sin(r*Math.PI/180)*s-555;
+                    let vy = Math.sin(r*Math.PI/180)*s-575;
 
                     hanabi.push(
                         new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
@@ -194,7 +194,7 @@ class Hanabi
                     let r = i
                     let s = 150
                     let vx = Math.cos(r*Math.PI/180)*s-189;
-                    let vy = Math.sin(r*Math.PI/180)*s-171;
+                    let vy = Math.sin(r*Math.PI/180)*s-191;
 
                     hanabi.push(
                         new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
@@ -206,7 +206,7 @@ class Hanabi
                     let r = i
                     let s = 300
                     let vx = Math.cos(r*Math.PI/180)*s-234;
-                    let vy = Math.sin(r*Math.PI/180)*s-345;
+                    let vy = Math.sin(r*Math.PI/180)*s-365;
 
                     hanabi.push(
                         new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
@@ -217,7 +217,7 @@ class Hanabi
                     let r = i
                     let s = 150
                     let vx = Math.cos(r*Math.PI/180)*s-189;
-                    let vy = Math.sin(r*Math.PI/180)*s-66;
+                    let vy = Math.sin(r*Math.PI/180)*s-86;
 
                     hanabi.push(
                         new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
@@ -228,7 +228,7 @@ class Hanabi
                     let r = i
                     let s = 300
                     let vx = Math.cos(r*Math.PI/180)*s-255;
-                    let vy = Math.sin(r*Math.PI/180)*s-216;
+                    let vy = Math.sin(r*Math.PI/180)*s-236;
 
                     hanabi.push(
                         new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
@@ -239,7 +239,7 @@ class Hanabi
                     let r = i
                     let s = 150
                     let vx = Math.cos(r*Math.PI/180)*s-147;
-                    let vy = Math.sin(r*Math.PI/180)*s+33;
+                    let vy = Math.sin(r*Math.PI/180)*s+13;
 
                     hanabi.push(
                         new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
@@ -250,7 +250,7 @@ class Hanabi
                     let r = i
                     let s = 300
                     let vx = Math.cos(r*Math.PI/180)*s-337.5;
-                    let vy = Math.sin(r*Math.PI/180)*s-45;
+                    let vy = Math.sin(r*Math.PI/180)*s-65;
 
                     hanabi.push(
                         new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)

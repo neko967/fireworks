@@ -1,24 +1,16 @@
-# README
+# ドでかい花火を打ち上げたいんだッッッ
+連打をして巨大な花火を打ち上げようというゲームです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+概要
+10秒間にクリックできた数の大きさの花火を手にれることができます。できる限り連打して大きい花火を打ち上げましょう。
 
-Things you may want to cover:
+機能
+* クリックカウント: スタートを押すと10秒のカウントダウンが始まり、その間にできる限りクリックボタン（花火の玉）をクリックします。
+* 花火打ち上げ: 10秒間にクリックした数の大きさの花火を打ち上げることができます。
+* 自動打ち上げボタン: 6.5秒おきに一度自動で打ち上げます。
+* 手動打ち上げボタン: クリックするたび無限に打ち上げることができますが、そこそこ大きい花火だと処理の関係でそもそも一発が限界だったりします。小さい花火をたくさん打ち上げて遊びましょう。
+* SNS共有: 打ち上げた花火の大きさ(10秒間にクリックした数)を、X(旧Twitter)で共有することができます。
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+使用技術
+* Ruby: Ver 3.2.2
+* Ruby on Rails: Ver 7.0.7

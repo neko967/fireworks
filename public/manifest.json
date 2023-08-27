@@ -1,6 +1,6 @@
 {
-  "name": "PWA Test",
-  "short_name": "PWA",
+  "name": "打ち上げ花火",
+  "short_name": "花火",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
   "display": "standalone",

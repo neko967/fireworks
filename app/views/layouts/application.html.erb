@@ -4,18 +4,30 @@
     <meta charset="utf-8">
     <title>Fireworks</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="manifest" href="./manifest.json">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <%= yield(:js) %>
-    
+    <%= favicon_link_tag asset_path('apple-touch-icon.png'), rel: 'icon', type: 'image/png' %>
+    <link rel="manifest" href="/manifest.json">
   </head>
 
   <body>
     <%= yield %>
   </body>
-  
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service_worker.js')
+          .then((registration) => {
+            console.log('Service Worker registered:', registration);
+          })
+          .catch((error) => {
+            console.error('Service Worker registration failed:', error);
+          });
+      });
+    }
+  </script>
 </html>

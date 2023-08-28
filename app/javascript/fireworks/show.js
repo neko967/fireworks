@@ -14,8 +14,8 @@ can.width = SCREEN_W;
 can.height = SCREEN_H;
 
 //花火の色：パールホワイト・レモンイエロー・ライトレモン・ワインレッド・赤・紅葉色・スカイブルー・ツイッターブルー・ライムグリーン・桜色・アメジスト・紫
-//const colors = ["#fffef7", "#FFF450", "#FFFCBF", "#932e44", "#C7000B","#a61017","#a0d8ef", "#1DA1F2", "#32CD32","#fdeeef", "#9E76B4","#884898"];
-const colors = ["#1DA1F2"];
+const colors = ["#fffef7", "#FFF450", "#FFFCBF", "#932e44", "#C7000B","#a61017","#a0d8ef", "#1DA1F2", "#32CD32","#fdeeef", "#9E76B4","#884898"];
+//const colors = ["#1DA1F2"];
 const hanabi_color = colors[Math.floor(Math.random() * colors.length)];
 const zanzo_color  = colors[Math.floor(Math.random() * colors.length)];
 
@@ -110,6 +110,18 @@ class Hanabi
             {
                 this.kill=true;
             
+                for(let i=0; i<value*9; i++)
+                {
+                    let r = rand(0, 360)
+                    let s = rand(10, 400)
+                    let vx = Math.cos(r*Math.PI/180)*s;
+                    let vy = Math.sin(r*Math.PI/180)*s;
+
+                    hanabi.push(
+                        new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*4)
+                    );
+                }
+                /*
                 for(let i=-1; i<120; i++)
                 {
                     let r = i
@@ -256,6 +268,7 @@ class Hanabi
                         new Hanabi(this.x>>8, this.y>>8, vx, vy, 1, value*3)
                     );
                 }
+                */
             }
         }
         else

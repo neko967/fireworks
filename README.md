@@ -2,7 +2,7 @@
 連打をして巨大な花火を打ち上げようというゲームです。
 
 # サービスURL
-[fireworks-svqb.onrender.com](fireworks-svqb.onrender.com)
+https://fireworks-svqb.onrender.com
 
 # 概要
 10秒間にクリックできた数の大きさの花火を手にれることができます。できる限り連打して大きい花火を打ち上げましょう。

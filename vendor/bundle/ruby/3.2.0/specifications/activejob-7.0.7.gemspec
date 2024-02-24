@@ -15,10 +15,10 @@ Gem::Specification.new do |s|
   s.homepage = "https://rubyonrails.org".freeze
   s.licenses = ["MIT".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.7.0".freeze)
-  s.rubygems_version = "3.4.12".freeze
+  s.rubygems_version = "3.4.10".freeze
   s.summary = "Job framework with pluggable queues.".freeze
 
-  s.installed_by_version = "3.4.12" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.4.10" if s.respond_to? :installed_by_version
 
   s.specification_version = 4
 
